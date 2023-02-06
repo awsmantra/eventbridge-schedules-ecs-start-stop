@@ -25,7 +25,7 @@ export class ECSStart extends cdk.NestedStack {
             target: {
                 arn: 'arn:aws:scheduler:::aws-sdk:ecs:updateService',
                 roleArn: props.roleArn,
-                input: JSON.stringify({ "Service": "calendar-service", "Cluster": "ECSFGCluster", "DesiredCount": 1 }),
+                input: JSON.stringify({ Service: "ecs-service", Cluster: "MyCluster", DesiredCount: 1 }),
             },
         });
     }
